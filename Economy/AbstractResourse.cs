@@ -28,7 +28,25 @@ namespace HomelessModel
         /// </summary>
         /// <param name="resourse"></param>
         /// <returns></returns>
-        public abstract double ConvertToMoney(AbstractResourse resourse);
+       // public abstract double ConvertToMoney(AbstractResourse resourse);
+
+        /// <summary>
+        /// Добавить операцию
+        /// </summary>
+        /// <param name="allowedOperations"></param>
+        public virtual void AddAllowedOperation(AllowedOperations allowedOperations)
+        {
+            AllowedOperations |= allowedOperations;
+        }
+
+        /// <summary>
+        /// Удалить операцию
+        /// </summary>
+        /// <param name="allowedOperations"></param>
+        public virtual void DeleteAllowedOperations(AllowedOperations allowedOperations)
+        {
+            AllowedOperations &= allowedOperations;
+        }
     }
 
 
@@ -42,6 +60,7 @@ namespace HomelessModel
         Create = 0x1,    // его можно созадть (скрафтить)
         Destroy = 0x2,    // его можно разобрать
         ConvertToMoney = 0x4,    // его можно преобразовать в деньги
+        ChangeOnSmth = 0x8,
 
         All = 0xffffffff,
     }

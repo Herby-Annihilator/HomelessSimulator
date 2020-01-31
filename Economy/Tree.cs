@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomelessModel.Economy
 {
+    [Serializable]
     public class Tree : AbstractResourse
     {
 

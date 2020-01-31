@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="Common\Icon.cs" />
     <Compile Include="Economy\AbstractResourse.cs" />
+    <Compile Include="Economy\Dollar.cs" />
     <Compile Include="Economy\Money.cs" />
+    <Compile Include="Economy\Rubles.cs" />
     <Compile Include="Economy\Tree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

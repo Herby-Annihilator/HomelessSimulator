@@ -6,22 +6,27 @@ using System.Threading.Tasks;
 
 namespace HomelessModel.Economy
 {
+    [Serializable]
     public class Money : AbstractResourse
     {
         public double Count { get; set; }
-        public override double ConvertToMoney(AbstractResourse resourse)
-        {
-            throw new NotImplementedException();
-        }
 
         public virtual string Name { get; protected set; }
 
+        /// <summary>
+        /// Коэффициент перевода
+        /// </summary>
         protected int conversionFactor;
 
-        public virtual void ConvertToOther(out Money newMoney)
+        //public virtual void ConvertToOtherMoney(out Money newMoney)
+        //{
+        //    newMoney = new Money();
+        //    newMoney.Count = this.Count * conversionFactor;   // подумать и написать
+        //}
+
+        public Money()
         {
-            newMoney = new Money();
-            newMoney.Count = this.Count * conversionFactor;   // подумать и написать
+            AllowedOperations = AllowedOperations.All;
         }
     }
 }
