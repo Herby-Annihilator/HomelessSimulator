@@ -21,7 +21,7 @@ namespace HomelessModel
         /// <summary>
         /// Разрешенные операции с данным ресурсом
         /// </summary>
-        public virtual AllowedOperations AllowedOperations { get; private set; }
+        public virtual AllowedOperations AllowedOperations { get; protected set; }
 
         /// <summary>
         /// Конвертирвать данный ресурс в деньги
